@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test page</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+  <link rel="stylesheet" href="HTML-role-revealing-CSS.css">
+</head>
+<body>
+
+<h2>Native elements</h2>
+<div><button type="button">Real button</button></div>
+<div><a href="#">Real anchor</a></div>
+<h1>Real level 1 heading</h1>
+<h2>Real level 2 heading</h2>
+<h3>Real level 3 heading</h3>
+<h4>Real level 4 heading</h4>
+<h5>Real level 5 heading</h5>
+<h6>Real level 6 heading</h6>
+<ul>
+<li>Real list item</li>
+</ul>
+<select>
+<option>Real option</option>
+</select>
+<div><input type="checkbox"> Real checkbox </div>
+<div><input type="radio"> Real radio </div>
+<div><input type="text"> Real text input </div>
+<main>Real main element</main>
+<nav>Real nav element</nav>
+<div><img>Real img element</div>
+<table><tr><td>Real table element</td></tr></table>
+<hr>
+<h2>Native elements with roles</h2>
+<div><button tabindex="0" type="button" role="button">Real button with <code>role="button"</code></button></div>
+<div><a href="#" tabindex="0" role="link">Real anchor with <code>role="link"</code></a></div>
+<h1 role="heading" aria-level="1">Real level 1 heading with <code>role="heading"</code> and <code>aria-level="1"</code></h1>
+<h2 role="heading" aria-level="2">Real level 2 heading with <code>role="heading"</code> and <code>aria-level="2"</code></h2>
+<h3 role="heading" aria-level="3">Real level 3 heading with <code>role="heading"</code> and <code>aria-level="3"</code></h3>
+<h4 role="heading" aria-level="4">Real level 4 heading with <code>role="heading"</code> and <code>aria-level="4"</code></h4>
+<h5 role="heading" aria-level="5">Real level 5 heading with <code>role="heading"</code> and <code>aria-level="5"</code></h5>
+<h6 role="heading" aria-level="6">Real level 6 heading with <code>role="heading"</code> and <code>aria-level="6"</code></h6>
+<ul role="list">
+<li role="listitem">Real <code>UL</code> list item with <code>role="listitem"</code></li>
+</ul>
+<select role="listbox">
+<option role="option">Real option with <code>role="option"</code></option>
+</select>
+<div><input type="checkbox" role="checkbox"> Real checkbox with <code>role="checkbox"</code></div>
+<div><input type="radio" role="radio"> Real radio with <code>role="radio"</code></div>
+<div><input type="text" role="textbox"> Real text input with <code>role="textbox"</code></div>
+<main role="main">Real main element with <code>role="main"</code></main>
+<nav role="navigation">Real nav element with <code>role="navigation"</code></nav>
+<div><img role="img">Real img element with <code>role="img"</code></div>
+<div><img role="image">Real img element with <code>role="image"</code></div>
+<table role="table"><tr><td>Real table element with <code>role="table"</code></td></tr></table>
+<hr>
+<h2>Fake elements with roles</h2>
+<div><span tabindex="0" role="button"><code>DIV</code> with <code>role="button"</code></span></div>
+<div><span tabindex="0" role="link"><code>DIV</code> with <code>role="link"</code></span></div>
+<div role="heading" aria-level="1"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="1"</code></div>
+<div role="heading" aria-level="2"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="2"</code></div>
+<div role="heading" aria-level="3"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="3"</code></div>
+<div role="heading" aria-level="4"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="4"</code></div>
+<div role="heading" aria-level="5"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="5"</code></div>
+<div role="heading" aria-level="6"><code>DIV</code> with <code>role="heading"</code> and <code>aria-level="6"</code></div>
+<div role="list">
+<div role="listitem"><code>DIV</code> list item with <code>role="listitem"</code></div>
+</div>
+<div tabindex="0" role="listbox">
+<div role="option"><code>DIV</code> option with <code>role="option"</code></div>
+</div>
+<div><span role="checkbox"></span><code>SPAN</code> with <code>role="checkbox"</code></div>
+<div><span role="radio"></span><code>SPAN</code> with <code>role="radio"</code></div>
+<div><span role="textbox"></span><code>SPAN</code> with <code>role="textbox"</code></div>
+<div role="main"><code>DIV</code> with <code>role="main"</code></div>
+<div role="navigation"><code>DIV</code> with <code>role="navigation"</code></div>
+<div role="img"><code>DIV</code> with <code>role="img"</code></div>
+<div role="image"><code>DIV</code> with <code>role="image"</code></div>
+<div role="table"><code>DIV</code> with <code>role="table"</code></table>
+<hr>
+
+</body>
+</html>
+
+
