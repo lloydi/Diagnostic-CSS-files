@@ -1,0 +1,69 @@
+[role="button"]:before,
+[role="link"]:before,
+[role="heading"][aria-level]:before,
+[role="list"]:before,
+[role="listitem"]:before,
+[role="listbox"]:before,
+[role="option"]:before,
+[role="checkbox"]:before,
+[role="radio"]:before,
+[role="textbox"]:before,
+[role="main"]:before,
+[role="navigation"]:before,
+[role="img"]:before,
+[role="image"]:before,
+[role="table"]:before {
+  content:"🚨 ROLE:" attr(role);
+  border:2px solid darkred;
+  color:darkred;
+  display: inline-block;
+  padding: 0 5px;
+  margin: 2px 5px 2px 0;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+[role="heading"][aria-level]:before {
+  content: "🚨 ROLE:" attr(role) ", LEVEL: " attr(aria-level);
+}
+
+button[role="button"]:before,
+a[role="link"]:before,
+h1[role="heading"][aria-level]:before,
+h2[role="heading"][aria-level]:before,
+h3[role="heading"][aria-level]:before,
+h4[role="heading"][aria-level]:before,
+h5[role="heading"][aria-level]:before,
+h6[role="heading"][aria-level]:before,
+ul[role="list"]:before,
+ol[role="list"]:before,
+li[role="listitem"]:before,
+select[role="listbox"]:before,
+option[role="option"]:before,
+input[type="checkbox"][role="checkbox"]:before,
+input[type="radio"][role="radio"]:before,
+input[type="text"][role="textbox"]:before, 
+input[type="search"][role="textbox"]:before, 
+input[type="email"][role="textbox"]:before, 
+input[type="url"][role="textbox"]:before, 
+input[type="tel"][role="textbox"]:before, 
+main[role="main"]:before,
+nav[role="navigation"]:before,
+img[role="img"]:before,
+img[role="image"]:before,
+table[role="table"]:before {
+  content:"⚠️ ROLE:" attr(role);
+  border-color:orange;
+  color:#000;
+}
+
+h1[role="heading"][aria-level]:before,
+h2[role="heading"][aria-level]:before,
+h3[role="heading"][aria-level]:before,
+h4[role="heading"][aria-level]:before,
+h5[role="heading"][aria-level]:before,
+h6[role="heading"][aria-level]:before {
+  content: "⚠️ ROLE:" attr(role) ", LEVEL: " attr(aria-level);
+}
