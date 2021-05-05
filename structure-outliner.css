@@ -1,0 +1,178 @@
+html {border:10px solid red;}
+html[lang] {border:10px solid green;}
+html[lang] [lang] {outline:2px solid darkred;}
+html [lang]:before {color:darkred;content:"Change of lang - no default lang set";}
+html[lang] [lang]:before {content:"Change of lang - " + attr(lang);}
+
+/* LANDMARKS ============================================ */
+article, aside, footer, form, header, main, nav, section {outline:2px dotted pink;}
+article:before, aside:before, footer:before, form:before, header:before, main:before, nav:before, section:before {background:pink;color:black;padding:5px;font-size: 12px;}
+article:before {content:"LM: article";}
+aside:before {content:"LM: aside";}
+footer:before {content:"LM: footer";}
+form:before {content:"LM: form";}
+header:before {content:"LM: header";}
+main:before {content:"LM: main";}
+nav:before {content:"LM: nav";}
+section:before {content:"LM: section";}
+
+article[aria-label]:before {content:"LM: article. Label='" attr(aria-label) "'";}
+aside[aria-label]:before {content:"LM: aside. Label='" attr(aria-label) "'";}
+footer[aria-label]:before {content:"LM: footer. Label='" attr(aria-label) "'";}
+form[aria-label]:before {content:"LM: form. Label='" attr(aria-label) "'";}
+header[aria-label]:before {content:"LM: header. Label='" attr(aria-label) "'";}
+main[aria-label]:before {content:"LM: main. Label='" attr(aria-label) "'";}
+nav[aria-label]:before {content:"LM: nav. Label='" attr(aria-label) "'";}
+section[aria-label]:before {content:"LM: section. Label='" attr(aria-label) "'";}
+
+/* HEADINGS ============================================ */
+h1,h2,h3,h4,h5,h6,[role=heading][aria-level] {outline:1px dotted green;}
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
+[role=heading][aria-level]:before {background:green;color:white;padding:5px;font-size: 12px;}
+h1:before {content:"h1";}
+h2:before {content:"h2";}
+h3:before {content:"h3";}
+h4:before {content:"h4";}
+h5:before {content:"h5";}
+h6:before {content:"h6";}
+[role=heading][aria-level]:before {content:"ARIA HEADING " attr(aria-level);}
+
+/* LISTS ============================================ */
+ul,li {outline:1px dotted orange;}
+ol,li {outline:1px dashed orange;}
+ul:before,ol:before,li:before {background:orange;color:white;padding:5px;font-size: 12px;}
+ul:before {content:"ul";}
+ol:before {content:"ol";}
+li:before {content:"li";}
+
+ul[role=tree] {outline:1px dotted orange;}
+ul[role=tree]:before {background:orange;color:white;padding:5px;font-size: 12px;}
+li[role=treeitem] {outline:1px dotted orange;}
+li[role=treeitem]:before {background:orange;color:white;padding:5px;font-size: 12px;}
+ul[role=tree]:before {content:"ul - role=tree";}
+li[role=treeitem]:before {content:"li - role=treeitem";}
+
+
+/* TABLES ============================================ */
+table, table th, table td {outline:1px dotted brown;}
+table:before,th:before {background:brown;color:white;padding:5px;font-size: 12px;display: block;}
+table:before {content:"table";}
+table[summary]:before {content:"table | 🚨 @summary=" attr(summary);}
+th:before {content:"th";}
+th[scope]:before {content:"th | @scope";}
+th[scope="col"]:before {content:"th | @scope=col";}
+th[scope="row"]:before {content:"th | @scope=row";}
+table caption {outline:1px dashed brown;}
+table caption:before {background:brown;color:white;padding:5px;font-size: 12px;}
+table caption:before {content:"caption";}
+
+/* GRIDS ============================================ */
+[role=grid], [role=grid][role=gridcell] {outline:1px dotted darkcyan;}
+[role=grid]:before {background:darkcyan;color:white;padding:5px;font-size: 12px;}
+[role=grid]:before {content:"[role=grid]";}
+
+
+/* TABS ============================================ */
+[role=tablist],[role=tab],[role=tabpanel] {outline:1px dotted purple;}
+[role=tablist]:before,[role=tab]:before,[role=tabpanel]:before {background:purple;color:white;padding:5px;font-size: 12px;}
+[role=tablist]:before,
+[role=tab]:before,
+[role=tabpanel]:before {content:attr(role);}
+
+/* TREES ============================================ */
+[role=tree] {outline:1px dotted ridgeback;}
+[role=tree]:before {background:ridgeback;color:black;padding:5px;font-size: 12px;}
+[role=treeitem] {outline:1px dotted ridgeback;}
+[role=treeitem]:before {background:ridgeback;color:black;padding:5px;font-size: 12px;}
+
+/* FORMS ============================================ */
+fieldset {outline:1px dotted darkgreen;}
+legend {outline:1px dotted darkgreen;}
+fieldset:before {content:"fieldset";background:darkgreen;color:white;padding:5px;font-size: 12px;}
+legend:before {content:"legend";background:darkgreen;color:white;padding:5px;font-size: 12px;}
+
+/* STATES ============================================ */
+*[aria-expanded] {border:1px solid olive;}
+*[aria-expanded]:after {font-size: 12px;padding: 5px;background: olive;color:#fff;display: inline-block;margin-left: 5px;}
+*[aria-expanded="true"]:after {content:"+";}
+*[aria-expanded="false"]:after {content:"-";}
+
+/* DIALOGS ============================================ */
+*[role=dialog] {border:1px solid darkblue;}
+*[role=dialog]:before {font-size: 12px;padding: 5px;background: darkblue;color:#fff;display: inline-block;margin-left: 5px;}
+*[role=dialog]:before {content:"dialog";}
+*[role=dialog][aria-label][tabindex]:before {content:"dialog | @aria-label | @tabindex";}
+*[role=dialog][aria-label][tabindex='-1']:before {content:"dialog | @aria-label | @tabindex=-1";}
+*[role=dialog][aria-modal=true]:before {content:"dialog | @aria-modal=true";}
+*[role=dialog][aria-modal=true][aria-labelledby]:before {content:"dialog | @aria-modal=true | @aria-labelledby";}
+*[role=dialog][aria-modal=true][aria-labelledby][tabindex]:before {content:"dialog | @aria-modal=true | @aria-labelledby | @tabindex";}
+*[role=dialog][aria-modal=true][aria-labelledby][tabindex='-1']:before {content:"dialog | @aria-modal=true | @aria-labelledby | @tabindex=-1";}
+*[role=dialog][aria-modal=true][aria-label]:before {content:"dialog | @aria-modal=true | @aria-label";}
+*[role=dialog][aria-modal=true][aria-label][tabindex]:before {content:"dialog | @aria-modal=true | @aria-label | @tabindex";}
+*[role=dialog][aria-modal=true][aria-label][tabindex='-1']:before {content:"dialog | @aria-modal=true | @aria-label | @tabindex=-1";}
+
+/* ARIA INCORRECT STRUCTURES ================================= */
+[role="menu"]>[role="menuitem"]>a,
+[role="menu"]>[role="menuitemcheckbox"]>a,
+[role="menu"]>[role="menuItem"]>a,
+[role="menu"]>[role="menuItemCheckbox"]>a {
+ outline:2px solid red;
+}
+[role="menu"]>[role="menuitem"]>a:before,
+[role="menu"]>[role="menuitemcheckbox"]>a:before,
+[role="menu"]>[role="menuItem"]>a:before,
+[role="menu"]>[role="menuItemCheckbox"]>a:before {
+ font-weight: bold;
+ display: inline-block;
+ margin-right: 5px;
+}
+
+[role="menu"]>[role="menuitem"]>a:before,
+[role="menu"]>[role="menuItem"]>a:before {
+ content:"🚨 Link is not focusable, role='menuitem' is applied to parent element";
+}
+[role="menu"]>[role="menuitemcheckbox"]>a:before,
+[role="menu"]>[role="menuItemCheckbox"]>a:before {
+ content:"🚨 Link is not focusable, role='menuitemcheckbox' is applied to parent element";
+}
+
+[role="menu"]>[role="menuitem"]>a[tabindex="0"]:before,
+[role="menu"]>[role="menuItem"]>a[tabindex="0"]:before,
+[role="menu"]>[role="menuitem"]>a[href]:before,
+[role="menu"]>[role="menuItem"]>a[href]:before {
+ content:"🚨 Link is focusable, role='menuitem' is applied to parent element";
+}
+[role="menu"]>[role="menuitemcheckbox"]>a[tabindex="0"]:before,
+[role="menu"]>[role="menuItemCheckbox"]>a[tabindex="0"]:before,
+[role="menu"]>[role="menuitemcheckbox"]>a[href]:before,
+[role="menu"]>[role="menuItemCheckbox"]>a[href]:before {
+ content:"🚨 Link is focusable, role='menuitemcheckbox' is applied to parent element";
+}
+
+/*
+[aria-haspopup="true"] {
+ outline:2px solid red;
+}
+[aria-haspopup="true"]:before {
+ font-weight: bold;
+ display: inline-block;
+ content:"🚨 Should this use `aria-haspopup=\"menu\"`, instead of `aria-haspopup=\"true\"`";
+}
+*/
+
+/* PRETEND THINGS ============================================ */
+
+/* HIDDEN THINGS ============================================ */
+
+[aria-hidden=true] {outline:2px solid black;position:relative;opacity:0.2;}
+
+
+
+table, ul, ol {outline-width:2px;outline-offset:2px;}
+
+
