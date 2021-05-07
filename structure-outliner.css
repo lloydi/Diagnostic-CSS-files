@@ -116,54 +116,6 @@ legend:before {content:"legend";background:darkgreen;color:white;padding:5px;fon
 *[role=dialog][aria-modal=true][aria-label][tabindex]:before {content:"dialog | @aria-modal=true | @aria-label | @tabindex";}
 *[role=dialog][aria-modal=true][aria-label][tabindex='-1']:before {content:"dialog | @aria-modal=true | @aria-label | @tabindex=-1";}
 
-/* ARIA INCORRECT STRUCTURES ================================= */
-[role="menu"]>[role="menuitem"]>a,
-[role="menu"]>[role="menuitemcheckbox"]>a,
-[role="menu"]>[role="menuItem"]>a,
-[role="menu"]>[role="menuItemCheckbox"]>a {
- outline:2px solid red;
-}
-[role="menu"]>[role="menuitem"]>a:before,
-[role="menu"]>[role="menuitemcheckbox"]>a:before,
-[role="menu"]>[role="menuItem"]>a:before,
-[role="menu"]>[role="menuItemCheckbox"]>a:before {
- font-weight: bold;
- display: inline-block;
- margin-right: 5px;
-}
-
-[role="menu"]>[role="menuitem"]>a:before,
-[role="menu"]>[role="menuItem"]>a:before {
- content:"🚨 Link is not focusable, role='menuitem' is applied to parent element";
-}
-[role="menu"]>[role="menuitemcheckbox"]>a:before,
-[role="menu"]>[role="menuItemCheckbox"]>a:before {
- content:"🚨 Link is not focusable, role='menuitemcheckbox' is applied to parent element";
-}
-
-[role="menu"]>[role="menuitem"]>a[tabindex="0"]:before,
-[role="menu"]>[role="menuItem"]>a[tabindex="0"]:before,
-[role="menu"]>[role="menuitem"]>a[href]:before,
-[role="menu"]>[role="menuItem"]>a[href]:before {
- content:"🚨 Link is focusable, role='menuitem' is applied to parent element";
-}
-[role="menu"]>[role="menuitemcheckbox"]>a[tabindex="0"]:before,
-[role="menu"]>[role="menuItemCheckbox"]>a[tabindex="0"]:before,
-[role="menu"]>[role="menuitemcheckbox"]>a[href]:before,
-[role="menu"]>[role="menuItemCheckbox"]>a[href]:before {
- content:"🚨 Link is focusable, role='menuitemcheckbox' is applied to parent element";
-}
-
-/*
-[aria-haspopup="true"] {
- outline:2px solid red;
-}
-[aria-haspopup="true"]:before {
- font-weight: bold;
- display: inline-block;
- content:"🚨 Should this use `aria-haspopup=\"menu\"`, instead of `aria-haspopup=\"true\"`";
-}
-*/
 
 /* PRETEND THINGS ============================================ */
 
