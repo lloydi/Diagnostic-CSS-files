@@ -6,15 +6,17 @@ html[lang] [lang]:before {content:"Change of lang - " + attr(lang);}
 
 /* LANDMARKS ============================================ */
 article, aside, footer, form, header, main, nav, section {outline:2px dotted pink;}
-article:before, aside:before, footer:before, form:before, header:before, main:before, nav:before, section:before {background:pink;color:black;padding:5px;font-size: 12px;}
-article:before {content:"LM: article";}
-aside:before {content:"LM: aside";}
-footer:before {content:"LM: footer";}
-form:before {content:"LM: form";}
-header:before {content:"LM: header";}
-main:before {content:"LM: main";}
-nav:before {content:"LM: nav";}
-section:before {content:"LM: section";}
+article[aria-label]:before,article[aria-labelledby]:before,aside[aria-label]:before,aside[aria-labelledby]:before,footer[aria-label]:before,footer[aria-labelledby]:before,form[aria-label]:before,form[aria-labelledby]:before,header[aria-label]:before,header[aria-labelledby]:before,main[aria-label]:before,main[aria-labelledby]:before,nav[aria-label]:before,nav[aria-labelledby]:before,section[aria-label]:before,section[aria-labelledby]:before {background:pink;color:black;padding:5px;font-size: 12px;}
+/*
+article[aria-label]:before,article[aria-labelledby]:before {content:"LM: named article";}
+aside[aria-label]:before,aside[aria-labelledby]:before {content:"LM: named aside";}
+footer[aria-label]:before,footer[aria-labelledby]:before {content:"LM: named footer";}
+form[aria-label]:before,form[aria-labelledby]:before {content:"LM: named form";}
+header[aria-label]:before,header[aria-labelledby]:before {content:"LM: named header";}
+main[aria-label]:before,main[aria-labelledby]:before {content:"LM: named main";}
+nav[aria-label]:before,nav[aria-labelledby]:before {content:"LM: named nav";}
+section[aria-label]:before,section[aria-labelledby]:before {content:"LM: named section";}
+*/
 
 article[aria-label]:before {content:"LM: article. Label='" attr(aria-label) "'";}
 aside[aria-label]:before {content:"LM: aside. Label='" attr(aria-label) "'";}
@@ -24,6 +26,15 @@ header[aria-label]:before {content:"LM: header. Label='" attr(aria-label) "'";}
 main[aria-label]:before {content:"LM: main. Label='" attr(aria-label) "'";}
 nav[aria-label]:before {content:"LM: nav. Label='" attr(aria-label) "'";}
 section[aria-label]:before {content:"LM: section. Label='" attr(aria-label) "'";}
+
+article[aria-labelledby]:before {content:"LM: article. Labelled by #'" attr(aria-labelledby) "'";}
+aside[aria-labelledby]:before {content:"LM: aside. Labelled by #'" attr(aria-labelledby) "'";}
+footer[aria-labelledby]:before {content:"LM: footer. Labelled by #'" attr(aria-labelledby) "'";}
+form[aria-labelledby]:before {content:"LM: form. Labelled by #'" attr(aria-labelledby) "'";}
+header[aria-labelledby]:before {content:"LM: header. Labelled by #'" attr(aria-labelledby) "'";}
+main[aria-labelledby]:before {content:"LM: main. Labelled by #'" attr(aria-labelledby) "'";}
+nav[aria-labelledby]:before {content:"LM: nav. Labelled by #'" attr(aria-labelledby) "'";}
+section[aria-labelledby]:before {content:"LM: section. Labelled by #'" attr(aria-labelledby) "'";}
 
 /* HEADINGS ============================================ */
 h1,h2,h3,h4,h5,h6,[role=heading][aria-level] {outline:1px dotted green;}
@@ -43,8 +54,8 @@ h6:before {content:"h6";}
 [role=heading][aria-level]:before {content:"ARIA HEADING " attr(aria-level);}
 
 /* LISTS ============================================ */
-ul,li {outline:1px dotted orange;}
-ol,li {outline:1px dashed orange;}
+ul,ol {outline:1px dotted orange;}
+ul li, ol li {outline:1px dashed orange;}
 ul:before,ol:before,li:before {background:orange;color:white;padding:5px;font-size: 12px;}
 ul:before {content:"ul";}
 ol:before {content:"ol";}
@@ -126,5 +137,4 @@ legend:before {content:"legend";background:darkgreen;color:white;padding:5px;fon
 
 
 table, ul, ol {outline-width:2px;outline-offset:2px;}
-
 
