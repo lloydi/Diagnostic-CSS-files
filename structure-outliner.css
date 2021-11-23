@@ -124,3 +124,6 @@ legend:before {content:"legend";background:darkgreen;color:white;padding:5px;fon
 
 table, ul, ol {outline-width:2px;outline-offset:2px;}
 
+/* FORCE FOCUS ============================================ */
+
+*:focus {outline:2px solid purple;}
