@@ -6,7 +6,7 @@ html[lang] *[lang]:before {content:"Change of lang - " + attr(lang);}
 
 /* LANDMARKS ============================================ */
 article, aside, footer, form, header, main, nav, section {outline:2px dotted pink;}
-article[aria-label]:before,article[aria-labelledby]:before,aside[aria-label]:before,aside[aria-labelledby]:before,footer[aria-label]:before,footer[aria-labelledby]:before,form[aria-label]:before,form[aria-labelledby]:before,header[aria-label]:before,header[aria-labelledby]:before,main[aria-label]:before,main[aria-labelledby]:before,nav[aria-label]:before,nav[aria-labelledby]:before,section[aria-label]:before,section[aria-labelledby]:before {background:pink;color:black;padding:5px;font-size: 12px;}
+article[aria-label]:before,article[aria-labelledby]:before,aside[aria-label]:before,aside[aria-labelledby]:before,footer[aria-label]:before,footer[aria-labelledby]:before,form[aria-label]:before,form[aria-labelledby]:before,header[aria-label]:before,header[aria-labelledby]:before,main[aria-label]:before,main[aria-labelledby]:before,nav[aria-label]:before,nav[aria-labelledby]:before,section[aria-label]:before,section[aria-labelledby]:before {background:pink;color:black;padding:5px;font-size: 16px;font-family:serif;}
 
 article[aria-label]:before {content:"LM: article. Label='" attr(aria-label) "'";}
 aside[aria-label]:before {content:"LM: aside. Label='" attr(aria-label) "'";}
@@ -34,7 +34,7 @@ h3:before,
 h4:before,
 h5:before,
 h6:before,
-*[role=heading][aria-level]:before {background:green;color:white;padding:5px;font-size: 12px;}
+*[role=heading][aria-level]:before {background:green;color:white;padding:5px;font-size: 16px;font-family:serif;}
 h1:before {content:"h1";}
 h2:before {content:"h2";}
 h3:before {content:"h3";}
@@ -46,22 +46,22 @@ h6:before {content:"h6";}
 /* LISTS ============================================ */
 ul,ol {outline:1px dotted orange;}
 ul li, ol li {outline:1px dashed orange;}
-ul:before,ol:before,li:before {background:orange;color:white;padding:5px;font-size: 12px;}
+ul:before,ol:before,li:before {background:orange;color:black;padding:5px;font-size: 16px;font-family:serif;}
 ul:before {content:"ul";}
 ol:before {content:"ol";}
 li:before {content:"li";}
 
 ul[role=tree] {outline:1px dotted orange;}
-ul[role=tree]:before {background:orange;color:white;padding:5px;font-size: 12px;}
+ul[role=tree]:before {background:orange;color:white;padding:5px;font-size: 16px;font-family:serif;}
 li[role=treeitem] {outline:1px dotted orange;}
-li[role=treeitem]:before {background:orange;color:white;padding:5px;font-size: 12px;}
+li[role=treeitem]:before {background:orange;color:white;padding:5px;font-size: 16px;font-family:serif;}
 ul[role=tree]:before {content:"ul - role=tree";}
 li[role=treeitem]:before {content:"li - role=treeitem";}
 
 
 /* TABLES ============================================ */
 table, table th, table td {outline:1px dotted brown;}
-table:before,th:before {background:brown;color:white;padding:5px;font-size: 12px;display: block;}
+table:before,th:before {background:brown;color:white;padding:5px;font-size: 16px;font-family:serif;display: block;}
 table:before {content:"table";}
 table[summary]:before {content:"table | 🚨 @summary=" attr(summary);}
 th:before {content:"th";}
@@ -69,42 +69,42 @@ th[scope]:before {content:"th | @scope";}
 th[scope="col"]:before {content:"th | @scope=col";}
 th[scope="row"]:before {content:"th | @scope=row";}
 table caption {outline:1px dashed brown;}
-table caption:before {background:brown;color:white;padding:5px;font-size: 12px;}
+table caption:before {background:brown;color:white;padding:5px;font-size: 16px;font-family:serif;}
 table caption:before {content:"caption";}
 
 /* GRIDS ============================================ */
 *[role=grid],*[role=grid][role=gridcell] {outline:1px dotted darkcyan;}
-*[role=grid]:before {background:darkcyan;color:white;padding:5px;font-size: 12px;}
+*[role=grid]:before {background:darkcyan;color:white;padding:5px;font-size: 16px;font-family:serif;}
 *[role=grid]:before {content:"[role=grid]";}
 
 /* TABS ============================================ */
 *[role=tablist],*[role=tab],*[role=tabpanel] {outline:1px dotted purple;}
-*[role=tablist]:before,*[role=tab]:before,*[role=tabpanel]:before {background:purple;color:white;padding:5px;font-size: 12px;}
+*[role=tablist]:before,*[role=tab]:before,*[role=tabpanel]:before {background:purple;color:white;padding:5px;font-size: 16px;font-family:serif;}
 *[role=tablist]:before,
 *[role=tab]:before,
 *[role=tabpanel]:before {content:attr(role);}
 
 /* TREES ============================================ */
 *[role=tree] {outline:1px dotted ridgeback;}
-*[role=tree]:before {background:ridgeback;color:black;padding:5px;font-size: 12px;}
+*[role=tree]:before {background:ridgeback;color:black;padding:5px;font-size: 16px;font-family:serif;}
 *[role=treeitem] {outline:1px dotted ridgeback;}
-*[role=treeitem]:before {background:ridgeback;color:black;padding:5px;font-size: 12px;}
+*[role=treeitem]:before {background:ridgeback;color:black;padding:5px;font-size: 16px;font-family:serif;}
 
 /* FORMS ============================================ */
 fieldset {outline:1px dotted darkgreen;}
 legend {outline:1px dotted darkgreen;}
-fieldset:before {content:"fieldset";background:darkgreen;color:white;padding:5px;font-size: 12px;}
-legend:before {content:"legend";background:darkgreen;color:white;padding:5px;font-size: 12px;}
+fieldset:before {content:"fieldset";background:darkgreen;color:white;padding:5px;font-size: 16px;font-family:serif;}
+legend:before {content:"legend";background:darkgreen;color:white;padding:5px;font-size: 16px;font-family:serif;}
 
 /* STATES ============================================ */
 *[aria-expanded] {border:1px solid olive;}
-*[aria-expanded]:after {font-size: 12px;padding: 5px;background: olive;color:#fff;display: inline-block;margin-left: 5px;}
+*[aria-expanded]:after {font-size: 16px;font-family:serif;padding: 5px;background: olive;color:#fff;display: inline-block;margin-left: 5px;}
 *[aria-expanded="true"]:after {content:"+";}
 *[aria-expanded="false"]:after {content:"-";}
 
 /* DIALOGS ============================================ */
 *[role=dialog] {border:1px solid darkblue;}
-*[role=dialog]:before {font-size: 12px;padding: 5px;background: darkblue;color:#fff;display: inline-block;margin-left: 5px;}
+*[role=dialog]:before {font-size: 16px;font-family:serif;padding: 5px;background: darkblue;color:#fff;display: inline-block;margin-left: 5px;}
 *[role=dialog]:before {content:"dialog";}
 *[role=dialog][aria-label][tabindex]:before {content:"dialog | @aria-label | @tabindex";}
 *[role=dialog][aria-label][tabindex='-1']:before {content:"dialog | @aria-label | @tabindex=-1";}
