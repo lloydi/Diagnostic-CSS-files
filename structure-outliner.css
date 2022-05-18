@@ -6,6 +6,7 @@ html[lang] *[lang]:before {content:"Change of lang - " + attr(lang);}
 
 /* LANDMARKS ============================================ */
 article, aside, footer, form, header, main, nav, section {outline:2px dotted pink;}
+article:before, aside:before, footer:before, form:before, header:before, main:before, nav:before, section:before {content:"‼ Landmark with no label";color:red;font-weight:bold;}
 article[aria-label]:before,article[aria-labelledby]:before,aside[aria-label]:before,aside[aria-labelledby]:before,footer[aria-label]:before,footer[aria-labelledby]:before,form[aria-label]:before,form[aria-labelledby]:before,header[aria-label]:before,header[aria-labelledby]:before,main[aria-label]:before,main[aria-labelledby]:before,nav[aria-label]:before,nav[aria-labelledby]:before,section[aria-label]:before,section[aria-labelledby]:before {background:pink;color:black;padding:5px;font-size: 16px;font-family:serif;}
 
 article[aria-label]:before {content:"LM: article. Label='" attr(aria-label) "'";}
@@ -83,6 +84,7 @@ table caption:before {content:"caption";}
 *[role=tablist]:before,
 *[role=tab]:before,
 *[role=tabpanel]:before {content:attr(role);}
+*[role=tab][aria-selected="true"]:before {content:"SELECTED tab";}
 
 /* TREES ============================================ */
 *[role=tree] {outline:1px dotted ridgeback;}
@@ -126,4 +128,4 @@ table, ul, ol {outline-width:2px;outline-offset:2px;}
 
 /* FORCE FOCUS ============================================ */
 
-*:focus {outline:2px solid purple;}
+*:focus {outline:2px solid purple!important;outline-offset:-2px;}
