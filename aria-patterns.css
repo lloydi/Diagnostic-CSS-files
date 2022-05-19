@@ -47,3 +47,13 @@ https://www.w3.org/TR/wai-aria-practices-1.2/#menu)
 [role="menu"]>[role="menuItemCheckbox"]>a[href]:before {
  content:"🚨 Link is focusable, role='menuitemcheckbox' is applied to parent element";
 }
+
+[role="tab"]:before {
+ content:"🚨 Tab not inside Tablist";
+}
+[role="tablist"] [role="tab"]:before {
+ content:"Tab";
+}
+[role="tablist"]:before {
+ content:"Tablist";
+}
