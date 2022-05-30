@@ -1,12 +1,16 @@
+*:before {font-family:sans-serif;}
+html:before {color:white;background:darkred;content:"No lang attribute";padding:3px;display: inline-block;}
+html[lang]:before {color:white;background:green; content:"Lang = " attr(lang);}
+html[lang=""]:before {content:"Empty lang attribute";}
 html {border:10px solid red;}
 html[lang] {border:10px solid green;}
 html[lang] *[lang] {outline:2px solid darkred;}
-html [lang]:before {color:darkred;content:"Change of lang - no default lang set";}
-html[lang] *[lang]:before {content:"Change of lang - " + attr(lang);}
+html [lang]:before {background:darkred;color:white;padding:3px;content:"Change of lang - no default lang set";}
+html[lang] *[lang]:before {content:"Change of lang - " attr(lang);}
 
 /* LANDMARKS ============================================ */
 article, aside, footer, form, header, main, nav, section {outline:2px dashed red;outline-offset:-2px;}
-article:before, aside:before, nav:before, section:before {content:"🚨 Landmark with no label";color:red;font-weight:bold;}
+article:before, aside:before, footer:before, form:before, header:before, main:before, nav:before, section:before {content:"‼ Landmark with no label";color:darkred;font-weight:bold;}
 article[aria-label]:before,article[aria-labelledby]:before,aside[aria-label]:before,aside[aria-labelledby]:before,footer[aria-label]:before,footer[aria-labelledby]:before,form[aria-label]:before,form[aria-labelledby]:before,header[aria-label]:before,header[aria-labelledby]:before,main[aria-label]:before,main[aria-labelledby]:before,nav[aria-label]:before,nav[aria-labelledby]:before,section[aria-label]:before,section[aria-labelledby]:before {outline:2px dotted pink;outline-offset:0;background:pink;color:black;padding:5px;font-size: 16px;font-family:serif;}
 
 article[aria-label]:before {content:"LM: article. aria-label='" attr(aria-label) "'";}
