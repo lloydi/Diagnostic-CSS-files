@@ -142,3 +142,11 @@ table, ul, ol {outline-width:2px;outline-offset:2px;}
 /* FORCE FOCUS ============================================ */
 
 *:focus {outline:4px solid purple!important;box-shadow: 0px 0px 0px 4px white;}
+
+/* FORCE POSITIONING ============================================ */
+/* To be used in conjunction with TamperMonkey script that allows for better positioning of labels */
+
+.pos-relative {position: relative;}
+.pos-static {position: static;}
+.pos-absolute {position: absolute;}
+.pos-fixed {position: fixed;}
