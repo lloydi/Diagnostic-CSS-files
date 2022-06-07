@@ -1,12 +1,14 @@
 *:before {font-family:sans-serif;font-size:14px;font-weight: bold;}
-html:before {color:white;background:darkred;content:"No lang attribute";padding:3px;display: inline-block;}
+html:before {color:white;background:darkred;content:"No lang attribute";padding:3px;display: inline-block;position: relative;top: 10px;left:10px;}
 html[lang]:before {color:white;background:green; content:"Lang = " attr(lang);}
 html[lang=""]:before {content:"Empty lang attribute";}
-html {border:10px solid red;}
-html[lang] {border:10px solid green;}
+html {outline:10px solid red;outline-offset:-10px}
+html[lang] {outline:10px solid green;}
 html[lang] *[lang] {outline:2px solid darkred;}
 html [lang]:before {background:darkred;color:white;padding:3px;content:"Change of lang - no default lang set";}
 html[lang] *[lang]:before {content:"Change of lang - " attr(lang);}
+html[lang="en"] *[lang="en"] {outline:none;}
+html[lang="en"] *[lang="en"]:before {display:none;}
 
 /* LANDMARKS ============================================ */
 article, aside, footer, form, header, main, nav, section {outline:2px dashed red;outline-offset:-2px;}
