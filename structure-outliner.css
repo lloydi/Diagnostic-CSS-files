@@ -144,17 +144,7 @@ table, ul, ol {outline-width:2px;outline-offset:2px;}
 *:focus {outline:4px solid purple!important;box-shadow: 0px 0px 0px 4px white;}
 
 /* FORCE POSITIONING ============================================ */
-/* To be used in conjunction with TamperMonkey script that allows for better positioning of some labels */
-/*
-
-var allEls = document.querySelectorAll('*');
-Array.from(allEls).forEach(el => {
- const objStyle = window.getComputedStyle(el,null);
- const objPos = objStyle.getPropertyValue("position");
- el.classList.add("pos-"+objPos);
-});
-
-*/
+/* To be used in conjunction with TamperMonkey script that allows for better positioning of labels */
 
 .pos-relative {position: relative;}
 .pos-static {position: relative;}
