@@ -67,3 +67,11 @@ h5[role="heading"][aria-level]:before,
 h6[role="heading"][aria-level]:before {
   content: "⚠️ ROLE:" attr(role) ", LEVEL: " attr(aria-level);
 }
+
+[role="group"][aria-roledescription]:before {
+  content: "GROUP with ROLE DESCRIPTION:" attr(aria-roledescription);
+}
+[role="region"][aria-roledescription]:before {
+  content: "REGION with ROLE DESCRIPTION:" attr(aria-roledescription);
+}
+
