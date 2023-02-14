@@ -178,8 +178,6 @@ li.pos-static:before {position: absolute;top:0;right:0;}
 li.pos-absolute:before {position: absolute;top:0;right:0;}
 li.pos-fixed:before {position: absolute;top:0;right:0;}
 
-
-
 a:before,
 button:before, 
 [role="link"],
@@ -187,3 +185,17 @@ button:before,
 {background:darkblue;color:white;font-wwight:bold;display:inline-block;padding:2px 4px;text-transform:uppercase;}
 a:before,[role="link"]:before {content:"link"}
 button:before, [role="button"]:before {content:"btn"}
+
+/* IMAGES ============================================ */
+img {outline:4px solid red}
+img[alt] {outline:4px solid transparent}
+img[alt=""] {outline:4px dotted orange}
+img[alt="Decorative"],
+img[alt="decorative"],
+img[alt="Image"],
+img[alt="image"],
+img[alt="Picture"],
+img[alt="picture"],
+img[alt="Logo"],
+img[alt="logo"],
+{outline:4px solid red}
