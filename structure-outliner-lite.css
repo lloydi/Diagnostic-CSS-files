@@ -1,0 +1,58 @@
+/* HEADINGS ============================================ */
+h1,h2,h3,h4,h5,h6,*[role=heading][aria-level] {position: relative;}
+html:hover h1,html:hover h2,html:hover h3,html:hover h4,html:hover h5,html:hover h6,html:hover *[role=heading][aria-level] {outline:1px dotted green;}
+html:hover h1:before,
+html:hover h2:before,
+html:hover h3:before,
+html:hover h4:before,
+html:hover h5:before,
+html:hover h6:before,
+html:hover *[role=heading][aria-level]:before {position: absolute;top: -20px;left: 0;background:green;color:white;padding:2px;font-size: 12px!important;}
+html:hover h1:before {content:"h1";}
+html:hover h2:before {content:"h2";}
+html:hover h3:before {content:"h3";}
+html:hover h4:before {content:"h4";}
+html:hover h5:before {content:"h5";}
+html:hover h6:before {content:"h6";}
+html:hover *[role=heading][aria-level]:before {content:"ARIA HEADING " attr(aria-level);}
+
+/* LISTS ============================================ */
+ul,ol {position: relative;}
+html:hover ul,html:hover ol {outline:1px dotted orange;}
+ul li, ol li {position: relative;}
+html:hover ul li, html:hover ol li {outline:1px dashed orange;}
+html:hover ul:before,
+html:hover ol:before,
+html:hover li:before {position: absolute;top: -20px;left: 0;background:orange;color:black;padding:2px;font-size: 12px!important;z-index:1000}
+html:hover ul:before {content:"ul";}
+html:hover ol:before {content:"ol";}
+/*li:before {content:"li";}*/
+
+dl{outline:1px dotted orange;position: relative;}
+html:hover dl{outline:1px dotted orange;position: relative;}
+dl dt, dl dd {position: relative;}
+html:hover dl dt, html:hover dl dd {outline:1px dashed orange;}
+html:hover dl:before,
+html:hover dt:before,
+html:hover dd:before {position: absolute;top: -20px;left: 0;background:orange;color:black;padding:2px;font-size: 12px!important;z-index:1000}
+html:hover dl:before {content:"dl";}
+html:hover dt:before {content:"dt";}
+html:hover dd:before {content:"dd";}
+
+/* LANDMARKS ============================================ */
+article, aside, footer, form, header, main, nav, section {outline-offset:-2px;position: relative;}
+html:hover article, html:hover aside, html:hover footer, html:hover form, html:hover header, html:hover main, html:hover nav, html:hover section {outline:2px dashed red;}
+html:hover article:before,
+html:hover aside:before,
+html:hover footer:before,
+html:hover form:before,
+html:hover header:before,
+html:hover main:before,
+html:hover nav:before,
+html:hover section:before {position: absolute;top: -20px;left: 0;content:"Landmark";color:white;background:darkred;padding:2px;font-size: 12px!important;display:inline-block;font-weight:bold;}
+
+/* TABLES ============================================ */
+table, table th, table td {outline:1px dotted brown;}
+html:hover table, html:hover table th, html:hover table td {outline:1px dotted brown;}
+html:hover table:before,
+html:hover th:before {background:brown;color:white;padding:2px;font-size: 12px!important;display: block;}
