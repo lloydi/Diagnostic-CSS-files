@@ -1,3 +1,5 @@
+html:hover *:before {position: absolute;top: -16px;left: -1px;text-transform: uppercase;padding:2px;font-size: 10px!important;font-weight:normal;display:block;z-index:1000;}
+
 /* HEADINGS ============================================ */
 h1,h2,h3,h4,h5,h6,*[role=heading][aria-level] {position: relative;}
 html:hover h1,html:hover h2,html:hover h3,html:hover h4,html:hover h5,html:hover h6,html:hover *[role=heading][aria-level] {outline:1px dotted green;}
@@ -7,7 +9,7 @@ html:hover h3:before,
 html:hover h4:before,
 html:hover h5:before,
 html:hover h6:before,
-html:hover *[role=heading][aria-level]:before {position: absolute;top: -20px;left: 0;background:green;color:white;padding:2px;font-size: 12px!important;}
+html:hover *[role=heading][aria-level]:before {background:green;color:white;}
 html:hover h1:before {content:"h1";}
 html:hover h2:before {content:"h2";}
 html:hover h3:before {content:"h3";}
@@ -23,7 +25,7 @@ ul li, ol li {position: relative;}
 html:hover ul li, html:hover ol li {outline:1px dashed orange;}
 html:hover ul:before,
 html:hover ol:before,
-html:hover li:before {position: absolute;top: -20px;left: 0;background:orange;color:black;padding:2px;font-size: 12px!important;z-index:1000}
+html:hover li:before {background:orange;color:black;}
 html:hover ul:before {content:"ul";}
 html:hover ol:before {content:"ol";}
 /*li:before {content:"li";}*/
@@ -34,7 +36,7 @@ dl dt, dl dd {position: relative;}
 html:hover dl dt, html:hover dl dd {outline:1px dashed orange;}
 html:hover dl:before,
 html:hover dt:before,
-html:hover dd:before {position: absolute;top: -20px;left: 0;background:orange;color:black;padding:2px;font-size: 12px!important;z-index:1000}
+html:hover dd:before {background:orange;color:black;}
 html:hover dl:before {content:"dl";}
 html:hover dt:before {content:"dt";}
 html:hover dd:before {content:"dd";}
@@ -49,10 +51,12 @@ html:hover form:before,
 html:hover header:before,
 html:hover main:before,
 html:hover nav:before,
-html:hover section:before {position: absolute;top: -20px;left: 0;content:"Landmark";color:white;background:darkred;padding:2px;font-size: 12px!important;display:inline-block;font-weight:bold;}
+html:hover section:before {content:"Landmark";color:white;background:darkred;}
 
 /* TABLES ============================================ */
-table, table th, table td {outline:1px dotted brown;}
+table, table th, table td {outline-offset:-2px;position: relative;}
 html:hover table, html:hover table th, html:hover table td {outline:1px dotted brown;}
 html:hover table:before,
-html:hover th:before {background:brown;color:white;padding:2px;font-size: 12px!important;display: block;}
+html:hover th:before {background:brown;color:white;}
+html:hover table:before {content:"Table";}
+html:hover th:before {content:"th";}
