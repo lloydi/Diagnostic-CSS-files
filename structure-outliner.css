@@ -129,6 +129,11 @@ legend:before {content:"legend";background:darkgreen;color:white;padding:5px;fon
 *[aria-expanded="true"]:after {content:"+";}
 *[aria-expanded="false"]:after {content:"-";}
 
+*[aria-pressed] {border:1px solid green;}
+*[aria-pressed]:after {font-size: 16px;padding: 5px;background: green;color:#fff;display: inline-block;margin-left: 5px;}
+*[aria-pressed="true"]:after {content:"P";}
+*[aria-pressed="false"]:after {content:"NP";}
+
 /* DIALOGS ============================================ */
 *[role=dialog] {border:1px solid darkblue;}
 *[role=dialog]:before {font-size: 16px;padding: 5px;background: darkblue;color:#fff;display: inline-block;margin-left: 5px;}
