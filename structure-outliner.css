@@ -86,17 +86,23 @@ dt:before {content:"dt";}
 dd:before {content:"dd";}
 
 /* TABLES ============================================ */
-table, table th, table td {outline:1px dotted brown;}
-table:before,th:before {background:brown;color:white;padding:5px;font-size: 16px;display: block;}
-table:before {content:"table";}
-table[summary]:before {content:"table | 🚨 @summary=" attr(summary);}
-th:before {content:"th";}
-th[scope]:before {content:"th | @scope";}
-th[scope="col"]:before {content:"th | @scope=col";}
-th[scope="row"]:before {content:"th | @scope=row";}
-table caption {outline:1px dashed brown;}
-table caption:before {background:brown;color:white;padding:5px;font-size: 16px;}
-table caption:before {content:"caption";}
+table, table th, table td,
+[role="table"],[role="columnheader"],[role="rowheader"],[role="cell"]
+{outline:1px dotted brown;}
+table:before,th:before,td:before, 
+[role="table"]:before,[role="columnheader"]:before,[role="rowheader"],[role="cell"]:before
+{background:brown;color:white;padding:5px;font-size: 16px;display: block;}
+table:before,[role="table"]:before {content:"table";}
+table[summary]:before,[role="table"]:before {content:"table | 🚨 @summary=" attr(summary);}
+th:before,[role="columnheader"]:before,[role="rowheader"]:before {content:"th";}
+td:before,[role="cell"]:before {content:"td";}
+td:before,[role="cell"]:before,[role="table"],[role="columnheader"],[role="rowheader"],[role="cell"] {padding:3px;font-size: 10px;}
+th[scope]:before,[role="columnheader"][scope]:before,[role="rowheader"][scope]:before {content:"th | @scope";}
+th[scope="col"]:before,[role="columnheader"][scope="col"]:before {content:"th | @scope=col";}
+th[scope="row"]:before,[role="rowheader"][scope="row"]:before {content:"th | @scope=row";}
+table caption,[role="table"] caption {outline:1px dashed brown;}
+table caption:before,[role="table"] caption:before {background:brown;color:white;padding:5px;font-size: 16px;}
+table caption:before,[role="table"] caption:before {content:"caption";}
 
 /* GRIDS ============================================ */
 *[role=grid],*[role=grid][role=gridcell] {outline:1px dotted darkcyan;}
